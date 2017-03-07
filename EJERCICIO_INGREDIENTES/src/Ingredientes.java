@@ -11,6 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Ingredientes {
 
@@ -49,17 +51,17 @@ public class Ingredientes {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JCheckBox chckbxMacarrones = new JCheckBox("Macarrones");
-		chckbxMacarrones.setBounds(6, 44, 97, 23);
-		frame.getContentPane().add(chckbxMacarrones);
+		JCheckBox platoMacarrones = new JCheckBox("Macarrones");
+		platoMacarrones.setBounds(6, 44, 97, 23);
+		frame.getContentPane().add(platoMacarrones);
 		
-		JCheckBox chckbxPatatasFritas = new JCheckBox("Patatas\r \r\nFritas");
-		chckbxPatatasFritas.setBounds(128, 44, 130, 23);
-		frame.getContentPane().add(chckbxPatatasFritas);
+		JCheckBox platoPatatasFritas = new JCheckBox("Patatas\r \r\nFritas");
+		platoPatatasFritas.setBounds(128, 44, 130, 23);
+		frame.getContentPane().add(platoPatatasFritas);
 		
-		JCheckBox chckbxSalchiguetis = new JCheckBox("Salchiguetis");
-		chckbxSalchiguetis.setBounds(260, 44, 97, 23);
-		frame.getContentPane().add(chckbxSalchiguetis);
+		JCheckBox platoSalchiguetis = new JCheckBox("Salchiguetis");
+		platoSalchiguetis.setBounds(260, 44, 97, 23);
+		frame.getContentPane().add(platoSalchiguetis);
 		
 		JSeparator separator = new JSeparator();
 		separator.setBounds(0, 35, 374, 2);
@@ -124,6 +126,15 @@ public class Ingredientes {
 		frame.getContentPane().add(separator_3);
 		
 		JButton Comprobar = new JButton("Comprobar");
+		Comprobar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				if (platoMacarrones.isSelected() && Pasta.isSelected() && Aceite.isSelected() && Tomate.isSelected() && Sal.isSelected()){
+					
+				}
+				
+			}
+		});
 		Comprobar.setBounds(128, 248, 112, 23);
 		frame.getContentPane().add(Comprobar);
 		
