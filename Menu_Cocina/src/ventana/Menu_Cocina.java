@@ -243,8 +243,11 @@ public class Menu_Cocina {
 						&& !Vinagre_1.isSelected()){
 					
 					txtAbajo.setText("Muy bien, ingredientes correctos!");
+					
 				} else {
+					
 					txtAbajo.setText("Mal... intentalo otra vez!");
+					
 				}
 				
 			}
