@@ -21,25 +21,29 @@ import java.awt.event.MouseEvent;
 
 public class Menu_Cocina {
 
-	private JRadioButton PlatoMacarrones;
-	private JRadioButton PlatoPatatas;
-	private JRadioButton Salchiguettis;
 
-	private JCheckBox Pasta;
-	private JCheckBox Aceite;
+
+	private JFrame frame;
+	private JTextField txtAbajo;
 	private JCheckBox Tomate;
 	private JCheckBox Sal;
-	private JCheckBox Patatas;
 	private JCheckBox Salchichas;
+	private JCheckBox Pasta;
 	private JCheckBox Pimienta;
 	private JCheckBox Pollo;
+	private JCheckBox Aceite;
 	private JCheckBox Vinagre;
+	private JCheckBox Patatas;
+	private JRadioButton platoMacarrones;
+	private JRadioButton platoPatatasFritas;
+	private JRadioButton platoSalchiguettis;
 
+	
 	public void limpiarCheck() {
 
-		PlatoMacarrones.setSelected(false);
-		PlatoPatatas.setSelected(false);
-		Salchiguettis.setSelected(false);
+		platoMacarrones.setSelected(false);
+		platoPatatasFritas.setSelected(false);
+		platoSalchiguettis.setSelected(false);
 		Pasta.setSelected(false);
 		Aceite.setSelected(false);
 		Tomate.setSelected(false);
@@ -51,19 +55,7 @@ public class Menu_Cocina {
 		Vinagre.setSelected(false);
 
 	}
-
-	private JFrame frame;
-	private JTextField txtAbajo;
-	private JCheckBox Tomate_1;
-	private JCheckBox Sal_1;
-	private JCheckBox Salchichas_1;
-	private JCheckBox Pasta_1;
-	private JCheckBox Pimienta_1;
-	private JCheckBox Pollo_1;
-	private JCheckBox Aceite_1;
-	private JCheckBox Vinagre_1;
-	private JCheckBox Patatas_1;
-
+	
 	/**
 	 * Launch the application.
 	 */
@@ -102,45 +94,46 @@ public class Menu_Cocina {
 		separator.setBounds(0, 35, 374, 2);
 		frame.getContentPane().add(separator);
 
-		JRadioButton platoMacarrones = new JRadioButton("Macarrones");
+		platoMacarrones = new JRadioButton("Macarrones");
 		platoMacarrones.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 
 				limpiarCheck();
+				platoMacarrones.setSelected(true);
 
 			}
 		});
 		platoMacarrones.setBounds(10, 44, 109, 23);
 		frame.getContentPane().add(platoMacarrones);
 
-		JRadioButton platoPatatasFritas = new JRadioButton("Patatas Fritas");
+		platoPatatasFritas = new JRadioButton("Patatas Fritas");
 		platoPatatasFritas.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 
 				limpiarCheck();
-
+				platoPatatasFritas.setSelected(true);
 			}
 		});
 		platoPatatasFritas.setBounds(119, 44, 109, 23);
 		frame.getContentPane().add(platoPatatasFritas);
 
-		JRadioButton platoSalchiguettis = new JRadioButton("Salchiguettis");
+		platoSalchiguettis = new JRadioButton("Salchiguettis");
 		platoSalchiguettis.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 
 				limpiarCheck();
-
+				platoSalchiguettis.setSelected(true);
 			}
 		});
 		platoSalchiguettis.setBounds(230, 44, 109, 23);
 		frame.getContentPane().add(platoSalchiguettis);
 
 		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(0, 74, 374, 2);
-		frame.getContentPane().add(separator_1);
+		separator.setBounds(0, 74, 374, 2);
+		frame.getContentPane().add(separator);
 
 		JTextPane Platos = new JTextPane();
 		Platos.setEditable(false);
@@ -160,41 +153,41 @@ public class Menu_Cocina {
 		separator_2.setBounds(0, 118, 374, 2);
 		frame.getContentPane().add(separator_2);
 
-		Tomate_1 = new JCheckBox("Tomate Frito");
-		Tomate_1.setBounds(21, 127, 97, 23);
-		frame.getContentPane().add(Tomate_1);
+		Tomate = new JCheckBox("Tomate Frito");
+		Tomate.setBounds(21, 127, 97, 23);
+		frame.getContentPane().add(Tomate);
 
-		Sal_1 = new JCheckBox("Sal");
-		Sal_1.setBounds(21, 153, 97, 23);
-		frame.getContentPane().add(Sal_1);
+		Sal = new JCheckBox("Sal");
+		Sal.setBounds(21, 153, 97, 23);
+		frame.getContentPane().add(Sal);
 
-		Salchichas_1 = new JCheckBox("Salchichas");
-		Salchichas_1.setBounds(21, 179, 97, 23);
-		frame.getContentPane().add(Salchichas_1);
+		Salchichas = new JCheckBox("Salchichas");
+		Salchichas.setBounds(21, 179, 97, 23);
+		frame.getContentPane().add(Salchichas);
 
-		Pasta_1 = new JCheckBox("Pasta");
-		Pasta_1.setBounds(130, 127, 97, 23);
-		frame.getContentPane().add(Pasta_1);
+		Pasta = new JCheckBox("Pasta");
+		Pasta.setBounds(130, 127, 97, 23);
+		frame.getContentPane().add(Pasta);
 
-		Pimienta_1 = new JCheckBox("Pimienta");
-		Pimienta_1.setBounds(130, 153, 97, 23);
-		frame.getContentPane().add(Pimienta_1);
+		Pimienta = new JCheckBox("Pimienta");
+		Pimienta.setBounds(130, 153, 97, 23);
+		frame.getContentPane().add(Pimienta);
 
-		Pollo_1 = new JCheckBox("Pollo");
-		Pollo_1.setBounds(130, 179, 97, 23);
-		frame.getContentPane().add(Pollo_1);
+		Pollo = new JCheckBox("Pollo");
+		Pollo.setBounds(130, 179, 97, 23);
+		frame.getContentPane().add(Pollo);
 
-		Aceite_1 = new JCheckBox("Aceite");
-		Aceite_1.setBounds(242, 127, 97, 23);
-		frame.getContentPane().add(Aceite_1);
+		Aceite = new JCheckBox("Aceite");
+		Aceite.setBounds(242, 127, 97, 23);
+		frame.getContentPane().add(Aceite);
 
-		Vinagre_1 = new JCheckBox("Vinagre");
-		Vinagre_1.setBounds(242, 153, 97, 23);
-		frame.getContentPane().add(Vinagre_1);
+		Vinagre = new JCheckBox("Vinagre");
+		Vinagre.setBounds(242, 153, 97, 23);
+		frame.getContentPane().add(Vinagre);
 
-		Patatas_1 = new JCheckBox("Patatas");
-		Patatas_1.setBounds(242, 179, 97, 23);
-		frame.getContentPane().add(Patatas_1);
+		Patatas = new JCheckBox("Patatas");
+		Patatas.setBounds(242, 179, 97, 23);
+		frame.getContentPane().add(Patatas);
 
 		JSeparator separator_3 = new JSeparator();
 		separator_3.setBounds(0, 235, 374, 2);
@@ -204,29 +197,30 @@ public class Menu_Cocina {
 		Comprobar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 
-				if (platoMacarrones.isSelected() && Pasta_1.isSelected() && Aceite_1.isSelected()
-						&& Tomate_1.isSelected() && Sal_1.isSelected() && !Patatas_1.isSelected()
-						&& !Salchichas_1.isSelected() && !Pimienta_1.isSelected() && !Pollo_1.isSelected()
-						&& !Vinagre_1.isSelected()) {
-
+				if (platoMacarrones.isSelected() && Pasta.isSelected() && Aceite.isSelected()
+						&& Tomate.isSelected() && Sal.isSelected() && !Patatas.isSelected()
+						&& !Salchichas.isSelected() && !Pimienta.isSelected() && !Pollo.isSelected()
+						&& !Vinagre.isSelected()) {
+					txtAbajo.setForeground(Color.GREEN);
 					txtAbajo.setText("Muy bien, ingredientes correctos!");
 
-				} else if (platoPatatasFritas.isSelected() && !Pasta_1.isSelected() && Aceite_1.isSelected()
-						&& !Tomate_1.isSelected() && Sal_1.isSelected() && Patatas_1.isSelected()
-						&& !Salchichas_1.isSelected() && !Pimienta_1.isSelected() && !Pollo_1.isSelected()
-						&& !Vinagre_1.isSelected()) {
-
+				} else if (platoPatatasFritas.isSelected() && !Pasta.isSelected() && Aceite.isSelected()
+						&& !Tomate.isSelected() && Sal.isSelected() && Patatas.isSelected()
+						&& !Salchichas.isSelected() && !Pimienta.isSelected() && !Pollo.isSelected()
+						&& !Vinagre.isSelected()) {
+					txtAbajo.setForeground(Color.GREEN);
 					txtAbajo.setText("Muy bien, ingredientes correctos!");
 
-				} else if (platoSalchiguettis.isSelected() && Pasta_1.isSelected() && Aceite_1.isSelected()
-						&& Tomate_1.isSelected() && Sal_1.isSelected() && !Patatas_1.isSelected()
-						&& Salchichas_1.isSelected() && !Pimienta_1.isSelected() && !Pollo_1.isSelected()
-						&& !Vinagre_1.isSelected()) {
-
+				} else if (platoSalchiguettis.isSelected() && Pasta.isSelected() && Aceite.isSelected()
+						&& Tomate.isSelected() && Sal.isSelected() && !Patatas.isSelected()
+						&& Salchichas.isSelected() && !Pimienta.isSelected() && !Pollo.isSelected()
+						&& !Vinagre.isSelected()) {
+					
+					txtAbajo.setForeground(Color.GREEN);
 					txtAbajo.setText("Muy bien, ingredientes correctos!");
 
 				} else {
-
+					txtAbajo.setForeground(Color.RED);
 					txtAbajo.setText("Mal... intentalo otra vez!");
 
 				}
@@ -236,6 +230,7 @@ public class Menu_Cocina {
 		frame.getContentPane().add(Comprobar);
 
 		txtAbajo = new JTextField();
+		txtAbajo.setForeground(Color.BLACK);
 		txtAbajo.setEditable(false);
 		txtAbajo.setText("Selecciona un plato y los Ingredientes\r para prepararlo");
 		txtAbajo.setHorizontalAlignment(SwingConstants.CENTER);
